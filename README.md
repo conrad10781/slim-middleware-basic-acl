@@ -29,7 +29,7 @@ $app->get("/path/of/your/route", "\App\Controller\SomeController:methodToCall")-
 // callable
 $app->get("/path/of/your/route", "\App\Controller\SomeController:methodToCall")->add(new \Slim\Middleware\HttpBasicACL(function ($request, $response) {
     // Some Logic Here Based On $_SERVER["PHP_AUTH_USER"] | $request->getServerParams()["PHP_AUTH_USER"] .
-    // Returning false will trigger a 401
+    // Returning false will trigger a 401, true will execute route
     return false;
 }));
 
