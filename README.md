@@ -35,4 +35,3 @@ $app->get("/path/of/your/route", "\App\Controller\SomeController:methodToCall")-
 
 ```
 
-
