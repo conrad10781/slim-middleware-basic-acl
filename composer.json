@@ -1,0 +1,26 @@
+{
+    "name": "rcs_us/slim-middleware-basic-acl",
+    "type": "library",
+    "description": "PSR-7 HTTP Authentication Access Middleware",
+    "keywords": ["middleware", "acl", "psr-7"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matthew Rice",
+            "email": "mrice@rcs.us",
+            "homepage": "https://www.rcs.us",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : "^5.5 || ^7.0"
+    },
+    "suggest": {
+        "tuupola/slim-basic-auth^2.3": "If you do not already have a PSR-7 HTTP Authenticator, this is a good one to start with"
+    },
+    "autoload": {
+        "psr-4": {
+          "Slim\\Middleware\\": "src"
+        }
+    }
+}
