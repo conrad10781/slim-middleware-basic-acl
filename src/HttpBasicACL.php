@@ -37,16 +37,14 @@ class HttpBasicACL
         if ( $this->_allowed != null ) {
             if ( is_array($this->_allowed) ) {
                 if ( !in_array($request->getServerParams()["PHP_AUTH_USER"], $this->_allowed) ) {
-                    return $response->withStatus(401)
-                    ->withHeader("WWW-Authenticate", 'Basic realm="Protected"');
+                    return $response->withStatus(403);
                 }
             }
             
             if (is_callable($this->_allowed)) {
                 $method = $this->_allowed;
                 if (false === $method($request, $response)) {
-                    return $response->withStatus(401)
-                    ->withHeader("WWW-Authenticate", 'Basic realm="Protected"');
+                    return $response->withStatus(403);
                 }
             }
         }
