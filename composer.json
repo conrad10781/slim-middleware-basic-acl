@@ -13,7 +13,7 @@
         }
     ],
     "require": {
-        "php" : "^5.5 || ^7.0"
+        "php" : "^5.5 || ^7.0 || ^8.0"
     },
     "suggest": {
         "tuupola/slim-basic-auth^2.3": "If you do not already have a PSR-7 HTTP Authenticator, this is a good one to start with"
